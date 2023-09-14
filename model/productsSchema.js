@@ -12,10 +12,11 @@ const schema = new mongoose.Schema({
     },
     createdAt : {
         type:Date,
+        default:Date.now()
     },
     brand : {
         type:String,
     } 
 })
 
-module.exports = schema
+module.exports = mongoose.model("product",schema)

@@ -4,6 +4,8 @@ const connectDB = require('./db/connection')
 const product = require('./routes/productsRoutes')
 require('dotenv').config()
 
+app.use(express.json())
+
 app.get('/',(req,res) => {
     res.send('homepage')
 })
